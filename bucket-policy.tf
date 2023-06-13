@@ -9,8 +9,8 @@ resource "aws_s3_bucket_policy" "tf_public_read_access" {
 	    "Principal": "*",
       "Action": [ "s3:GetObject" ],
       "Resource": [
-        "${aws_s3_bucket.test-bucket.arn}",
-        "${aws_s3_bucket.test-bucket.arn}/*"
+        "${aws_s3_bucket.tf_bucket.arn}",
+        "${aws_s3_bucket.tf_bucket.arn}/*"
       ]
     }
   ]
